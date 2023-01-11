@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head><meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="/style.css">
+  <title>検索結果</title>
+</head>
+
+<body>
+<header>
+  <nav>
+    <ul>
+      <li><a href="index.html">ホーム</a>
+      <li><a href="favorite.html">お気に入り</a>
+    </ul>
+  </nav>
+  <div style="text-align: center;"><img class="fit-picture" src="/pic/trisashi_logo_title_only.png" alt="team logo" width="550"></img>
+  </div>
+  <div style="text-align: center">
+    <font size="8">ITS求人情報サイト</font><br>
+    <div>
+</header>
+<div id="app">
+  <v-app>
+    <v-main>
+      <v-container>
+        <div>
+          <template>
+            <v-container fluid>
+              <v-row align="center">
+                <v-col class="d-flex" cols="12" sm="10">
+                  <v-select :items="city" label="場所を選択してください"></v-select>
+                </v-col>
+              </v-row>
+            </v-container>
+          </template>
+          <template>
+            <v-container fluid>
+              <v-row align="center">
+                <v-col class="d-flex" cols="12" sm="10">
+                  <v-select :items="town" label="鹿児島県を選択した場合のみ選択してください"></v-select>
+                </v-col>
+              </v-row>
+            </v-container>
+          </template>
+          <template>
+            <v-container fluid>
+              <v-row align="center">
+                <v-col cols="12" sm="10">
+                  <v-select v-model="value" :items="items" attach chips label="試験形式を選択してください" multiple></v-select>
+                </v-col>
+              </v-row>
+            </v-container>
+          </template>
+          <template>
+            <v-row align="center" justify="space-around">
+              <v-col cols="12" sm="10">
+                <v-btn>
+                  <a href="favorite.html">お気に入り</a>
+                </v-btn>
+              </v-col>
+            </v-row>
+          </template>
+          <br>
+          <v-row align="center" justify="space-around">
+            <v-btn depressed color="success">
+              <a href="result.html">検索</a>
+            </v-btn>
+          </v-row>
+          </br>
+        </div>
+      </v-container>
+    </v-main>
+  </v-app>
+</div>
+
+</div>
+<div id="app">
+  <v-app>
+    <v-main>
+      <v-container>
+        <div>
+          <table id="table_style" border="1" width="500" style="margin:2rem 20rem;">
+            <tr>
+              <th width="130">会社名</th>
+              <td colspan="2">株式会社空色</td>
+            </tr>
+            <tr>
+              <th>本社地</th>
+              <td>鹿児島県</td>
+              <td>鹿児島市</td>
+            </tr>
+            <tr>
+              <th>学科</th>
+              <td colspan="2">ITスペシャリスト科</td>
+            </tr>
+            <tr>
+              <th>募集職種</th>
+              <td colspan="2">SE・プログラマ</td>
+            </tr>
+            <tr>
+              <th>採用予定人数</th>
+              <td colspan="2">5名</td>
+            </tr>
+            <tr>
+              <th>試験形式</th>
+              <td colspan="2">面接 ・適性検査</td>
+            </tr>
+            <tr>
+              <th>PDF</th>
+              <td colspan="2">
+                <v-btn>
+                  <a href="/kyuuzinhyou/求人票 株式会社空色.pdf">クリックしてください　</a>
+                </v-btn>
+              </td>
+
+            </tr>
+            <tr>
+
+
+              <th colspan="3" align="center">
+                <div class="main" style="font-size: 1.35rem;">
+
+                  <div class="item-frame">
+
+                    <label class="switch"><input type='checkbox' class="checkbox" />お気に入り</label>
+                  </div>
+                </div>
+              </th>
+            </tr>
+          </table>
+
+          <table id="table_style" border="1" width="500" style="margin:2rem 20rem;">
+            <tr>
+              <th width="130">会社名</th>
+              <td colspan="2">株式会社スマテック</td>
+            </tr>
+            <tr>
+              <th>本社地</th>
+              <td>鹿児島県</td>
+              <td>鹿児島市</td>
+            </tr>
+            <tr>
+              <th>学科</th>
+              <td colspan="2">ITスペシャリスト科</td>
+            </tr>
+            <tr>
+              <th>募集職種</th>
+              <td colspan="2">SE・プログラマ</td>
+            </tr>
+            <tr>
+              <th>採用予定人数</th>
+              <td colspan="2">2名</td>
+            </tr>
+            <tr>
+              <th>試験形式</th>
+              <td colspan="2">面接 ・適性検査</td>
+            </tr>
+            <tr>
+              <th>PDF</th>
+              <td colspan="2">
+                <v-btn>
+                  <a href="/kyuuzinhyou/求人票.pdf">クリックしてください　</a>
+                </v-btn>
+              </td>
+            <tr>
+
+              <th colspan="3" align="center">
+                <div class="main" style="font-size: 1.35rem;">
+                  <div class="item-frame">
+
+                    <label class="switch"><input type='checkbox' class="checkbox" />お気に入り</label>
+                  </div>
+                </div>
+              </th>
+            </tr>
+            </tr>
+          </table>
+          <table id="table_style" border="1" width="500" style="margin:2rem 20rem;">
+            <tr>
+              <th width="130">会社名</th>
+              <td colspan="2">株式会社コロン</td>
+            </tr>
+            <tr>
+              <th>本社地</th>
+              <td>鹿児島県</td>
+              <td>鹿児島市</td>
+            </tr>
+            <tr>
+              <th>学科</th>
+              <td colspan="2">ITスペシャリスト科</td>
+            </tr>
+            <tr>
+              <th>募集職種</th>
+              <td colspan="2">ITコンサルタント</td>
+            </tr>
+            <tr>
+              <th>採用予定人数</th>
+              <td colspan="2">5名</td>
+            </tr>
+            <tr>
+              <th>試験形式</th>
+              <td colspan="2">面接 ・適性検査</td>
+            </tr>
+            <tr>
+              <th>PDF</th>
+              <td colspan="2">
+                <v-btn>
+                  <a href="/kyuuzinhyou/新規 Microsoft Word 文書..pdf">クリックしてください　</a>
+                </v-btn>
+              </td>
+            <tr>
+
+              <th colspan="3" align="center">
+                <div class="main" style="font-size: 1.35rem;">
+                  <div class="main">
+                    <div class="item-frame">
+
+                      <label class="switch"><input type='checkbox' class="checkbox" />お気に入り</label>
+                    </div>
+                  </div>
+              </th>
+            </tr>
+            </tr>
+          </table>
+          <table id="table_style" border="1" width="500" style="margin:2rem 20rem;">
+            <tr>
+              <th width="130">会社名</th>
+              <td colspan="2">株式会社KGT</td>
+            </tr>
+            <tr>
+              <th>本社地</th>
+              <td>鹿児島県</td>
+              <td>鹿児島市</td>
+            </tr>
+            <tr>
+              <th>学科</th>
+              <td colspan="2">ITスペシャリスト科</td>
+            </tr>
+            <tr>
+              <th>募集職種</th>
+              <td colspan="2">システム保守運用</td>
+            </tr>
+            <tr>
+              <th>採用予定人数</th>
+              <td colspan="2">3名</td>
+            </tr>
+            <tr>
+              <th>試験形式</th>
+              <td colspan="2">面接 ・適性検査 ・一般常識 ・小論文</td>
+            </tr>
+            <tr>
+              <th>PDF</th>
+              <td colspan="2">
+                <v-btn>
+                  <a href="/kyuuzinhyou/新規 Microsoft Word 文書..pdf">クリックしてください　</a>
+                </v-btn>
+              </td>
+            <tr>
+
+              <th colspan="3" align="center">
+                <div class="main" style="font-size: 1.35rem;">
+                  <div class="item-frame">
+
+                    <label class="switch"><input type='checkbox' class="checkbox" />お気に入り</label>
+                  </div>
+                </div>
+              </th>
+            </tr>
+            </tr>
+          </table>
+          <table id="table_style" border="1" width="500" style="margin:2rem 20rem;">
+            <tr>
+              <th width="130">会社名</th>
+              <td colspan="2">株式会社山谷商会</td>
+            </tr>
+            <tr>
+              <th>本社地</th>
+              <td>鹿児島県</td>
+              <td>鹿児島市</td>
+            </tr>
+            <tr>
+              <th>学科</th>
+              <td colspan="2">ITスペシャリスト科</td>
+            </tr>
+            <tr>
+              <th>募集職種</th>
+              <td colspan="2">SE・プログラマ</td>
+            </tr>
+            <tr>
+              <th>採用予定人数</th>
+              <td colspan="2">3名</td>
+            </tr>
+            <tr>
+              <th>試験形式</th>
+              <td colspan="2">面接 ・適性検査 ・小論文</td>
+            </tr>
+            <tr>
+              <th>PDF</th>
+              <td colspan="2">
+                <v-btn>
+                  <a href="/kyuuzinhyou/新規 Microsoft Word 文書..pdf">クリックしてください　</a>
+                </v-btn>
+              </td>
+            <tr>
+
+              <th colspan="3" align="center">
+                <div class="main" style="font-size: 1.35rem;">
+                  <div class="item-frame">
+
+                    <label class="switch"><input type='checkbox' class="checkbox" />お気に入り</label>
+                  </div>
+                </div>
+              </th>
+            </tr>
+            </tr>
+          </table>
+          <table id="table_style" border="1" width="500" style="margin:2rem 20rem;">
+            <tr>
+              <th width="130">会社名</th>
+              <td colspan="2">株式会社ABCネット</td>
+            </tr>
+            <tr>
+              <th>本社地</th>
+              <td>鹿児島県</td>
+              <td>鹿児島市</td>
+            </tr>
+            <tr>
+              <th>学科</th>
+              <td colspan="2">ITスペシャリスト科</td>
+            </tr>
+            <tr>
+              <th>募集職種</th>
+              <td colspan="2">ネットワークエンジニア</td>
+            </tr>
+            <tr>
+              <th>採用予定人数</th>
+              <td colspan="2">10名</td>
+            </tr>
+            <tr>
+              <th>試験形式</th>
+              <td colspan="2">面接 ・適性検査</td>
+            </tr>
+            <tr>
+              <th>PDF</th>
+              <td colspan="2">
+                <v-btn>
+                  <a href="/kyuuzinhyou/新規 Microsoft Word 文書..pdf">クリックしてください　</a>
+                </v-btn>
+              </td>
+            <tr>
+
+              <th colspan="3" align="center">
+                <div class="main" style="font-size: 1.35rem;">
+
+                  <div class="item-frame">
+
+                    <label class="switch"><input type='checkbox' class="checkbox" />お気に入り</label>
+                  </div>
+                </div>
+              </th>
+            </tr>
+            </tr>
+          </table>
+          <v-btn class="ma-2" href="index.html" text color="orange darken-2" color="link" min-height="20"
+                 class="x-small post-link align-center py-1 px-2">
+            <span class="text-left">back</span>
+          </v-btn>
+        </div>
+      </v-container>
+    </v-main>
+  </v-app>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+<script>
+  new Vue({
+    el: '#app',
+    vuetify: new Vuetify(),
+    data: () => ({
+      city: ['鹿児島県', '福岡県', '佐賀県', '長崎県', '熊本県', '大分県', '宮崎県', '沖縄県', '茨城県', '栃木県', '群馬県', '埼玉県', '千葉県', '東京都', '神奈川県', '三重県', '滋賀県', '京都府', '大阪府', '兵庫県', '奈良県', '和歌山県', '北海道', '青森県', '岩手県', '宮城県', '秋田県', '山形県', '福島県', '新潟県', '富山県', '石川県', '福井県', '山梨県', '長野県', '岐阜県', '静岡県', '愛知県', '鳥取県', '島根県', '岡山県', '広島県', '山口県', '徳島県', '香川県', '愛媛県', '高知県'],
+      items: ['面接', '適性検査', '小論文', '一般常識'],
+      value: ['面接', '適性検査', '小論文', '一般常識'],
+      town: ['鹿児島市', '鹿屋市', '枕崎市', '阿久根市', '出水市', '指宿市', '西之表市', '垂水市', '指定しない'],
+      items: [
+        {
+          src: 'backgrounds/bg.jpg',
+
+        },
+
+      ],
+      selected: [],
+    }),
+  })
+
+</script>
+</body>
+
+</html>

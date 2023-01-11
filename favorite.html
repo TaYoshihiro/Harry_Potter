@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head><meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="/style.css">
+  <title>お気に入り</title>
+</head>
+
+<body>
+
+<header class='header'>
+  <nav>
+    <ul>
+      <li><a href="index.html">ホーム</a>
+      <li><a href="favorite.html">お気に入り</a>
+    </ul>
+  </nav>
+  <div style="text-align: center;"><img class="fit-picture" src="/pic/trisashi_logo_title_only.png" alt="team logo"
+                                        width="550"></img>
+  </div>
+  <div style="text-align: center">
+    <font size="8">ITS求人情報サイト</font><br>
+    <div>
+</header>
+
+<div id="app">
+  <v-app>
+    <v-main>
+      <v-container>
+        <div>
+          <table id="table_style" border="1" width="500" style="margin:2rem 20rem;">
+            <tr>
+              <th width="130">会社名</th>
+              <td colspan="2">株式会社空色</td>
+            </tr>
+            <tr>
+              <th>本社地</th>
+              <td>鹿児島県</td>
+              <td>鹿児島市</td>
+            </tr>
+            <tr>
+              <th>学科</th>
+              <td colspan="2">ITスペシャリスト科</td>
+            </tr>
+            <tr>
+              <th>募集職種</th>
+              <td colspan="2">SE・プログラマ</td>
+            </tr>
+            <tr>
+              <th>採用予定人数</th>
+              <td colspan="2">5名</td>
+            </tr>
+            <tr>
+              <th>試験形式</th>
+              <td colspan="2">面接 ・適性検査</td>
+            </tr>
+          </table>
+
+          <table id="table_style" border="1" width="500" style="margin:2rem 20rem;">
+            <tr>
+              <th width="130">会社名</th>
+              <td colspan="2">株式会社スマテック</td>
+            </tr>
+            <tr>
+              <th>本社地</th>
+              <td>鹿児島県</td>
+              <td>鹿児島市</td>
+            </tr>
+            <tr>
+              <th>学科</th>
+              <td colspan="2">ITスペシャリスト科</td>
+              <
+            <tr>
+              <th>募集職種</th>
+              <td colspan="2">SE・プログラマ</td>
+            </tr>
+            <tr>
+              <th>採用予定人数</th>
+              <td colspan="2">2名</td>
+            </tr>
+            <tr>
+              <th>試験形式</th>
+              <td colspan="2">面接 ・適性検査</td>
+            </tr>
+          </table>
+          <table id="table_style" border="1" width="500" style="margin:2rem 20rem;">
+            <tr>
+              <th width="130">会社名</th>
+              <td colspan="2">株式会社山谷商会</td>
+            </tr>
+            <tr>
+              <th>本社地</th>
+              <td>鹿児島県</td>
+              <td>鹿児島市</td>
+            </tr>
+            <tr>
+              <th>学科</th>
+              <td colspan="2">ITスペシャリスト科</td>
+            </tr>
+            <tr>
+              <th>募集職種</th>
+              <td colspan="2">SE・プログラマ</td>
+            </tr>
+            <tr>
+              <th>採用予定人数</th>
+              <td colspan="2">3名</td>
+            </tr>
+            <tr>
+              <th>試験形式</th>
+              <td colspan="2">面接 ・適性検査 ・小論文</td>
+            </tr>
+          </table>
+          <v-btn class="ma-2" href="index.html" text color="orange darken-2" color="link" min-height="20"
+                 class="x-small post-link align-center py-1 px-2">
+            <span class="text-left">back</span>
+          </v-btn>
+        </div>
+      </v-container>
+    </v-main>
+  </v-app>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+<script>
+  new Vue({
+    el: '#app',
+    vuetify: new Vuetify(),
+    data: () => ({
+      theme: {
+        dark: true,
+        themes: {
+          light: {
+            link: "#000000"
+          },
+          dark: {
+            link: "#91ceff"
+          }
+        }
+      }
+    }),
+  })
+
+</script>
+</body>
+
+</html>
